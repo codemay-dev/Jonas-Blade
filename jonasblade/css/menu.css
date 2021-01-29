@@ -1,0 +1,282 @@
+/*** Menu 
+---------------------------------------------------------------------------------***/
+.navbar {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-height: auto;
+  justify-content: left;
+}
+.navbar-nav li {
+  float: none;
+  display: block;
+}
+
+
+
+/*** Mobile Menu ***/
+
+/* This is for mobile menu styles used on SM and XS screen sizes */
+
+/*** Toggle Button ***/
+.navbar-toggler {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  z-index: 10000;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+.navbar-toggler.close {
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-shadow: none;
+  box-shadow: none;
+  float: none;
+  position: fixed;
+  left: 0;
+  padding-left: 100px;
+  margin-left: 190px;
+  height: 30px;
+  transition: margin-left 0.5s ease-out, margin-top 300ms ease-out 300ms;
+}
+.navbar-toggler:focus,
+.navbar-toggler.close:focus {
+  outline: none;
+  box-shadow: none;
+}
+#topBar.fadeOn .navbar-toggler.close {
+  margin-top: 0px;
+}
+.navbar-toggler.close:not(:disabled):not(.disabled):focus, .navbar-toggler.close:not(:disabled):not(.disabled):hover {
+  opacity: 1;
+}
+.navbar-toggler:hover, .navbar-toggler:focus {
+  background: transparent;
+}
+.navbar-toggler .bars {
+  display: inline-block;
+}
+.navbar-toggler span {
+  /* This is the color of the menu hamburger lines */
+  background: #fff none repeat scroll 0 0;
+  display: block;
+  height: 1px;
+  width: 30px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, background-color 0.5s ease-out;
+  backface-visibility: hidden;
+}
+.navbar-toggler span.icon-bar1 {
+  margin-bottom: 10px;
+}
+.navbar-toggler.close span {
+  opacity: 0;
+}
+.navbar-toggler.close span.icon-bar1 {
+  /*margin-top: 15px;*/
+  margin-top: -7px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.navbar-toggler.close span.icon-bar3 {
+  margin-top: -11px;
+  transform: rotate(-45deg);
+}
+.navbar-toggler.close span.icon-bar1,
+.navbar-toggler.close span.icon-bar3 {
+  background: #000 none repeat scroll 0 0 !important;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, background-color 0.5s ease-out 0.5s;
+}
+
+.navbar-toggler .link {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+}
+.navbar-toggler.close .link {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s ease-out;
+}
+#topBar .menu a.navbar-brand {
+  padding: 0 !important;
+  margin: 0 0 0 10px;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: none;
+  transition: all 0.5s ease-out;
+}
+body.light #topBar .menu a.navbar-brand {
+  color: #000;
+}
+#topBar.fadeOn .menu a.navbar-brand {
+  color: #000;
+}
+#topBar .menu .navbar-toggler.close a.navbar-brand {
+  color: #000;
+  transition: all 0.5s ease-out 0.5s;
+}
+
+@media(max-width:767.98px) {
+  #topBar.fadeOff .navbar-toggler.close {
+    /*margin-top: 28px;*/
+  }
+  #topBar.fadeOn .navbar-toggler.close {
+    margin-top: -12px;
+  }
+  .navbar-toggler .link {
+    display: none;
+  }
+}
+
+
+
+/*** Menu Wrapper ***/
+.navbar-collapse {
+  /* Color of Mobile Menu
+  background: rgba(255,255,255,0.75); */
+  background: url('../images/JonasBlade-Logo-Black-small.png') no-repeat 25px 45px / 200px auto rgba(255,255,255,0.95);
+  font-family: adobe-garamond-pro, sans-serif;
+  padding: 0;
+  height: 100% !important;
+  max-height: 100%;
+  width: 330px;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: -330px;
+  transition: all 0.5s ease-out;
+}
+#topBar.fadeOn .navbar-collapse {
+  background-position: 30px 5px;
+}
+
+@media(max-width:1199.98px) {
+  /*
+  .navbar-toggler.close {
+    margin-left: 21%;
+  }
+  .navbar-collapse {
+    width: 28%;
+    left: -28%;
+  }
+  */
+}
+@media(max-width:991.98px) {
+  .navbar-toggler.close {
+    /*margin-left: 30%;*/
+    margin-top: -12px;
+  }
+  .navbar-collapse {
+    background-position: 15px 10px;
+    /*
+    width: 38%;
+    left: -38%;
+    */
+  }
+  .navbar-toggler.close span.icon-bar1 {
+    margin-top: 15px;
+  }
+}
+@media(max-width:767.98px) {
+  .navbar-toggler.close {
+    /*margin-left: 40%;*/
+    margin-top: -15px;
+  }
+  .navbar-collapse {
+    background-position: 15px 10px;
+    /*
+    width: 50%;
+    left: -50%;
+    */
+  }
+}
+@media(max-width:575.98px) {
+  .navbar-toggler.close {
+    margin-left: 60%;
+  }
+  .navbar-collapse {
+    background: url('../images/logo-black.png') no-repeat 15px 10px / 200px auto rgba(255,255,255,1);
+    width: 100%;
+    left: -100%;
+  }
+}
+
+.navbar-collapse.collapse {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+}
+.navbar-collapse.show {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+}
+
+/*** Nav ul ***/
+.navbar-nav {
+  float: none;
+  transition: all 0.5s ease-out;
+}
+.navbar-collapse.collapse .navbar-nav {
+  margin-top: 100px;
+}
+.navbar-collapse.show .navbar-nav {
+  margin-top: 100px;
+  padding-left: 15px;
+}
+.navbar-nav {
+  text-align: left;
+}
+
+
+/*** Mobile Menu Links ***/
+.navbar-nav > li.home {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.navbar-nav > li.home > a {
+  font-size: 1.3rem;
+}
+.navbar-nav > li.spacer {
+  margin-top: 30px;
+}
+.navbar-nav > li.bold {
+  font-weight: bold;
+}
+.navbar-nav > li > a {
+  background: none;
+  color: #fff;
+  padding: 10px;
+  line-height: 20px;
+  text-align: left;
+  font-size: 17px;
+}
+/*** Mobile Menu Links Hover ***/
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+  background: none;
+  color: #ff1f1f;
+}
+/*** Mobile Menu Active Page Link ***/
+.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+  background: none;
+  color: #ff1f1f;
+}
+/*** Dropdown Parent Link ***/
+.navbar-nav > .show > a, .navbar-nav > .show > a:hover, .navbar-nav > .show > a:focus {
+  color: #fff;
+}
+
+@media(max-width:767.98px) {
+  .navbar-nav {
+    max-height: 450px;
+    overflow: scroll;
+  }
+}

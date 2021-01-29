@@ -1,0 +1,59 @@
+body.login {
+  background: #000;
+}
+
+.login h1 a {
+  background-image: url('codemay.png');
+  background-size: 200px auto;
+  height: 25px;
+  width: auto;
+}
+
+.login #login_error, .login .message {
+  border-color: #de3314;
+}
+
+.login form {
+  background: #000;
+  box-shadow: none;
+}
+
+.login label {
+  color: #fff;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background: #efefef none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%;
+  padding: 5px;
+  width: 100%;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+  background: #fff none repeat scroll 0 0;
+}
+
+.login .button-primary {
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: none;
+  text-shadow: none;
+  color: #fff;
+  line-height: normal !important;
+}
+.login .button-primary:hover,
+.login .button-primary:active {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: none;
+  text-shadow: none;
+  color: #000;
+  line-height: normal !important;
+}
